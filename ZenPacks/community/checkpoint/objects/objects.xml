@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<objects>
+<!-- ('', 'zport', 'dmd', 'Devices', 'Server', 'Linux', 'Nokia') -->
+<object id='/zport/dmd/Devices/Server/Linux/Nokia' module='Products.ZenModel.DeviceClass' class='DeviceClass'>
+<property visible="True" type="lines" id="zCollectorPlugins" >
+['zenoss.snmp.NewDeviceMap', 'zenoss.snmp.DeviceMap', 'zenoss.snmp.InterfaceMap', 'zenoss.snmp.RouteMap', 'zenoss.snmp.IpServiceMap', 'zenoss.snmp.HRFileSystemMap', 'zenoss.snmp.HRSWRunMap', 'zenoss.snmp.CpuMap', 'community.snmp.CheckpointTunnels']
+</property>
+<property visible="True" type="string" id="zPythonClass" >
+ZenPacks.community.checkpoint.CheckpointDevice
+</property>
+</object>
+</objects>

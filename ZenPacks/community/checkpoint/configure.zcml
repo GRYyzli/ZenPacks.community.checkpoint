@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:zcml="http://namespaces.zope.org/zcml">
+
+    <configure zcml:condition="installed Products.Zuul">
+        
+	<adapter factory=".info.vpnTunnelInfo"
+                 for=".vpnTunnel.vpnTunnel"
+                 provides=".interfaces.IvpnTunnelInfo"
+                 />
+
+<!--	<adapter factory=".info.VDatastoreInfo"
+                 for=".VDatastore.VDatastore"
+                 provides=".interfaces.IVDatastoreInfo"
+                 />-->
+
+        <include package=".browser"/> 
+
+	<!--<browser:resourceDirectory
+                 name="jsr"
+                 directory="resources"
+                 />
+        
+	<browser:viewlet
+                 name="js-guest"
+                 paths="/++resource++jsr/guest.js"
+                 weight="10"
+                 manager="Products.ZenUI3.browser.interfaces.IJavaScriptSrcManager"
+                 class="Products.ZenUI3.browser.javascript.JavaScriptSrcBundleViewlet"
+                 permission="zope2.Public"
+                 />
+        
+	<browser:viewlet
+                 name="js-datastore"
+                 paths="/++resource++jsr/datastore.js"
+                 weight="10"
+                 manager="Products.ZenUI3.browser.interfaces.IJavaScriptSrcManager"
+                 class="Products.ZenUI3.browser.javascript.JavaScriptSrcBundleViewlet"
+                 permission="zope2.Public"
+                 />-->
+
+    </configure>
+</configure>

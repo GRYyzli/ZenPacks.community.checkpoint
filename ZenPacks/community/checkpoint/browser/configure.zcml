@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure xmlns:browser="http://namespaces.zope.org/browser">
+
+    <browser:resourceDirectory
+	     name="vpn"
+	     directory="resources"
+	     />        
+
+    <browser:viewlet
+             name="js-vpn"
+             paths="/++resource++vpn/js/vpn.js"
+             weight="10"
+             manager="Products.ZenUI3.browser.interfaces.IHeadExtraManager"
+             class="Products.ZenUI3.browser.javascript.JavaScriptSrcBundleViewlet"
+             permission="zope2.Public"
+             />
+	
+</configure>
